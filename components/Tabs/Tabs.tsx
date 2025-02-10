@@ -29,7 +29,7 @@ export const Tabs = forwardRef(function Tabs(
             {tabs?.map((tab, index) => (
               <RadixTabs.Trigger
                 key={index}
-                className="border-gray-light/30 text-gray-light data-[state=active]:text-gray-dark relative flex grow select-none items-center justify-center border-b-2 px-3 pb-2 pt-1 text-lg font-bold outline-none transition-colors duration-300 ease-in-out data-[state=active]:border-[#f39a67]"
+                className="border-gray-light/30 text-gray-light data-[state=active]:text-gray-dark relative flex grow select-none items-center justify-center border-b-2 px-3 pb-2 pt-1 text-lg font-bold outline-hidden transition-colors duration-300 ease-in-out data-[state=active]:border-[#f39a67]"
                 value={index.toString()}
               >
                 {tab.title}
@@ -37,7 +37,7 @@ export const Tabs = forwardRef(function Tabs(
             ))}
           </RadixTabs.List>
           {tabs.map((tab, index) => (
-            <RadixTabs.Content key={index} className="outline-none " value={index.toString()}>
+            <RadixTabs.Content key={index} className="outline-hidden " value={index.toString()}>
               {tab.children}
             </RadixTabs.Content>
           ))}
